@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-brand-primary: #4f46e5;      /* Professional Indigo */
+  --color-brand-secondary: #3b82f6;    /* Soft Blue */
+  --color-brand-accent: #10b981;       /* Emerald */
+  --color-dark-bg: #09090b;            /* Minimal Zinc 950 */
+  --color-dark-card: #18181b;          /* Minimal Zinc 900 */
+  --color-dark-border: #27272a;        /* Minimal Zinc 800 */
+}
+
+:root {
+  font-family: var(--font-sans);
+  background-color: var(--color-dark-bg);
+  color: #f4f4f5;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--color-dark-bg);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Minimal Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Subtle Layout Borders */
+.glass-nav {
+  background: rgba(9, 9, 11, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #1f1f23;
+}
+
+.glass-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: #3f3f46;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Clean Input Styles */
+input, select, textarea {
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 1px #4f46e5;
+}
+
+/* Dropdown/Select override */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23a1a1aa' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.25em;
+  padding-right: 2.5rem;
+}

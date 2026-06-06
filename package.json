@@ -1,0 +1,13 @@
+{
+  "name": "job-portal-root",
+  "version": "1.0.0",
+  "description": "Job Portal Root Helper Scripts",
+  "scripts": {
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
