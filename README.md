@@ -104,13 +104,6 @@ Create a `.env` file inside the `backend` directory:
 ```bash
 touch backend/.env
 ```
-Add the following configuration variables inside `backend/.env`:
-```env
-MONGO_URI=your_mongodb_connection_string
-PORT=8000
-SECRET_KEY=your_jwt_secret_token_string
-```
-
 ### 4. Run the Application
 You can run both the frontend and backend servers concurrently with a single command from the root directory:
 ```bash
